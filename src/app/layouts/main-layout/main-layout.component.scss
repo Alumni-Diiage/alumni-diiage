@@ -1,0 +1,33 @@
+@import '@angular/material/theming';
+@import '../../../theme/default-theme';
+
+
+mat-sidenav-container, mat-sidenav-content, mat-sidenav {
+  height: 100%;
+}
+mat-sidenav {
+  width: 250px;
+}
+mat-toolbar {
+  .spacer {
+    flex: 1 1 auto;
+  }
+}
+
+.restaurant-select {
+  width: 20%;
+  text-align: right;
+}
+
+.nav-list {
+  :focus {
+    background: mat-color($alumni-diiage-accent, lighter);
+  }
+  .selected {
+    background: mat-color($alumni-diiage-accent, lighter);
+  }
+}
+
+.page {
+  padding: 10px;
+}

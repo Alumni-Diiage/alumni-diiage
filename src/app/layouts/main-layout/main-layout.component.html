@@ -1,0 +1,45 @@
+<div style="height: 100%">
+  <mat-toolbar color="primary">
+    <button mat-icon-button (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Alumni Diiage</span>
+  
+    <span class="spacer"></span>
+
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>person</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="logout()">
+        <mat-icon>logout</mat-icon>
+        <span>Déconnexion</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar>
+  
+  <mat-sidenav-container>
+    <mat-sidenav 
+      #snav
+      [mode]="mobileQuery.matches ? 'over' : 'side'"
+      [opened]="!mobileQuery.matches"
+    >
+      <mat-nav-list class="nav-list">
+        <mat-list-item 
+          [routerLink]="p.url" 
+          routerLinkActive="selected"
+          *ngFor="let p of appPages"
+          (click)="mobileQuery.matches ? snav.close() : {}"
+        >
+          <mat-icon matListItemIcon>{{p.icon}}</mat-icon>
+          <span matListItemTitle>{{p.title}}</span>
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <main class="page">
+        <router-outlet></router-outlet>
+      </main>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
