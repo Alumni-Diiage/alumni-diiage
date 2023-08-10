@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "alumni-diiage": {
+      "hosting": {
+        "alumni-diiage": [
+          "alumni-diiage"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "alumni-diiage"
+  }
+}
