@@ -2,8 +2,11 @@
   "hosting": [
     {
       "target": "alumni-diiage",
-      "source": ".",
-      "frameworksBackend": {}
+      "public": "dist/alumni-diiage"
     }
-  ]
+  ],
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  }
 }
