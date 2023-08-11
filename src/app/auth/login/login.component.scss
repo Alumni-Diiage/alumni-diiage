@@ -1,0 +1,15 @@
+@import '@angular/material/theming';
+@import '../../../theme/default-theme';
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}

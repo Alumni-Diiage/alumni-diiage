@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { BaseService } from './base.service';
 import AlumniEvent from './events/models/alumni-event.model';
 import EventMapper from './events/models/event.mapper';
+import { UserMapper } from './auth/models/user-mapper';
+import { AuthService } from './auth/services/auth.service';
 
 
 @NgModule({
@@ -16,8 +18,10 @@ import EventMapper from './events/models/event.mapper';
   providers: [
     // Mappers
     EventMapper,
+    UserMapper,
 
     // Services
+    AuthService,
     {
       provide: 'EventsService',
       useFactory: () => {

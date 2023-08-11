@@ -1,0 +1,7 @@
+@import '@angular/material/theming';
+@import '../../../theme/default-theme.scss';
+
+.container {
+  height: 100vh;
+  background: linear-gradient(to right, mat-color($alumni-diiage-primary), mat-color($alumni-diiage-primary, lighter));
+}

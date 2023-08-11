@@ -1,5 +1,4 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { Observable, of } from 'rxjs';
 import { BaseService } from 'src/app/shared/base.service';
 import AlumniEvent from 'src/app/shared/events/models/alumni-event.model';
 
@@ -21,6 +20,7 @@ export class EventsComponent implements OnInit {
   }
 
   ngOnInit() {
+
     this.eventsService
       .get()
       .subscribe(events => {
@@ -28,7 +28,7 @@ export class EventsComponent implements OnInit {
       })
   }
 
-  addEvent() {
+  async addEvent() {
     const prefix = ['amazing', 'challenging', 'fantastic', 'awesome', 'fabulous', 'intriguing', 'boring']
     const names = ['meeting', 'party', 'afterwork', 'workshop', 'hackathon']
     this.eventsService.add({
